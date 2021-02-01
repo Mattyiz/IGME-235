@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/main.js"></script>
+</head>
+
+<body>
+    <h1>Pokemon Search</h1>
+    <p>To use select what you will search through. You can search through pokemon, abilities, moves, and types.
+        <br>You can search for pokemon by their pokedex number or their name.
+        <br>Information from generation 8 is not complete yet. </p>
+
+    <div class="widgets">
+        Search Type ->
+        <select id="type">
+            <option value="pokemon">Pokemon</option>
+            <option value="ability">Ability</option>
+            <option value="move">Move</option>
+            <option value="type">Type</option>
+        </select>
+    </div>
+
+    <div class="widgets">
+        Search Term ->
+        <input id="searchterm" type="text" size="30" maxlength="30" autofocus value="slugma" />
+    </div>
+
+
+
+    <div class="widgets">
+        <button type="button" id="search" class="green">Search</button>
+    </div>
+    <div id="status">Ready to Search!</div>
+    <hr>
+
+    <h2>Results</h2>
+    <div id="content">
+        <p>No data yet!</p>
+    </div>
+
+</body>
+
+</html>

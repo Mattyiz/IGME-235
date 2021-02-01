@@ -1,0 +1,41 @@
+/* Do everything in this file */
+
+h2, h3{
+    border-bottom: 1px solid red;
+    clear: both;
+}
+
+figure{
+    float: right;
+    
+}
+
+figure > img{
+    width: 40%;
+}
+
+figcaption{
+    margin-left: 3rem;
+}
+
+.tet{
+    clear: both;
+    border: 1px solid black;
+    text-align: center;
+}
+
+.tet > img{
+    float:right;
+}
+
+.aliases{
+    text-align: left;
+    margin: 1em;
+}
+
+footer{
+    position: fixed;
+    top: 0%;
+    right: 0%;
+    z-index: -64893579;
+}

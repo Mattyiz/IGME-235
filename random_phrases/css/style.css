@@ -1,0 +1,81 @@
+html{
+    background-color: #336699;
+    
+}
+
+body{
+    background-image: url("../media/IceCream.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+    display: grid;
+    grid-template-rows: 1fr 4fr 1fr;
+    grid-template-areas:"header"
+                        "main"
+                        "footer";
+}
+
+@media screen and (min-width:1000px){
+    body{
+        background-image: url("../media/IceCream.png");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        margin: 5% 15%;
+
+        display: grid;
+        grid-template-rows: 1fr 6.5fr .4fr;
+        grid-template-areas:"header"
+                            "main"
+                            "footer";
+    }
+}
+
+header{
+    text-align: center;
+    margin-top: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    color: white;
+    background: rgba(31, 36, 32, 0.7);
+
+    grid-area: header;
+}
+
+main{
+
+    margin: auto;
+    width: 350px;
+
+    grid-area: main;
+    background: rgba(72, 78, 73, 0.486);
+    padding: 2em;
+}
+
+#flavorButton{
+    border-radius: 4px;
+    border: 2px solid pink;
+    transition-duration: 0.4s;
+}
+
+#flavorButton:hover{
+    background-color: pink;
+}
+
+#flavorButton:active{
+    background-color: purple;
+    border: 2px solid purple;
+}
+
+#dynamic{
+    font-size: 150%;
+    color: white;
+    
+}
+
+footer{
+    grid-area: footer;
+    color: rgba(7, 7, 7, 0.8);
+    font-size: 75%;
+
+}

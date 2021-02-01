@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        let xhr = new XMLHttpRequest();
+        xhr.onload = dataLoaded;
+        xhr.open("GET", "https://pokeapi.co/api/v2/pokemon/slugma/");
+        console.log("Url used: https://pokeapi.co/api/v2/pokemon/slugma/");
+        xhr.send();
+        
+
+        function dataLoaded(e) {
+            // 5 - event.target is the xhr object
+            let xhr = e.target;
+
+            // 6 - xhr.responseText is the JSON file we just downloaded
+            //console.log(xhr.responseText);
+
+            let obj = JSON.parse(xhr.responseText);
+
+            //console.log(obj);
+
+            console.log("Pokedex id: " + obj.id);
+
+            console.log("Pokemon Name: " + obj.name);
+
+            console.log("Pokemon Type: " + obj.types[0].type.name)
+
+        }
+
+    </script>
+</head>
+
+<body>
+
+    <p>Check the console</p>
+
+</body>
+
+</html>

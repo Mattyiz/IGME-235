@@ -1,0 +1,46 @@
+
+figure{
+    max-width: 650px;
+    /*overflow: scroll;*/
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+figure > img{
+    width: 100%;
+}
+
+header, footer, main{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#tetlist {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.tet{
+    flex: 1 0 350px;
+    border: 1px solid black;
+    text-align: center;
+}
+
+.tet > img{
+    width: 60%;
+}
+
+span{
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    font-weight: bold;
+    font-size: larger;
+}
+
+.aliases{
+    text-align: left;
+    margin-left: 1em;
+}

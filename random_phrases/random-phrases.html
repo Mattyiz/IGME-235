@@ -1,0 +1,54 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/bootstrap-reboot.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Generate an ice cream flavor</h1>
+        
+    </header>
+
+    <main>
+        <p id=dynamic></p>
+        <p><button id="flavorButton" type="button">Generate Another Flavor</button></p>
+    </main>
+    
+
+    <footer>
+        <h2>Copyright 2020 Matt Izzo</h2>
+    </footer>
+
+    <script>
+        "use strict";
+
+        let flavors = ["Vanilla", "Chocolate", "Cookies and Cream", "Cookie Dough", "Mint Choco Chip", "Strawberry", "Chocolate and Vanilla"];
+        let random = Math.round(Math.random() * (flavors.length - 1));
+        let button = document.querySelector("#flavorButton");
+
+        var p = document.getElementById("dynamic");
+
+        p.innerHTML = flavors[random];
+
+        function displayQuote(random, p){
+            random = Math.round(Math.random() * (flavors.length - 1));
+            p.innerHTML = flavors[random];
+        }
+
+        button.addEventListener('click', (e) => {
+            displayQuote(random, p)
+            
+        });
+
+    </script>
+
+</body>
+
+</html>
