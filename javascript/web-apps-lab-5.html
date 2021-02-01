@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Web Apps-6</title>
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+
+        #colorform {
+            background-color: #dfecdf;
+            color: #111;
+            padding: 1em;
+            width: 400px;
+        }
+
+        #colorform p#info {
+            background-color: white;
+            color: black;
+            width: 300px;
+            height: 100px;
+            padding: .5em;
+        }
+
+        #colorform legend {
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="colorform">
+        <legend>Choose your favorite color!</legend>
+        <p><input type="radio" name="colorGroup" id="colorGroupRed" value="red" /> Red</p>
+        <p><input type="radio" name="colorGroup" id="colorGroupGreen" value="green" /> Green</p>
+        <p><input type="radio" name="colorGroup" id="colorGroupBlue" value="blue" /> Blue</p>
+        <p><button id="colorButton" type="button">Submit</button></p>
+        <p id="info"></p>
+    </div>
+
+    <script>
+
+        "use strict";
+        let radio = document.querySelectorAll('input[name="colorGroup"]');
+        let submit = document.querySelector("#colorButton");
+
+        //document.querySelector("#info").innerHTML = radio.length;
+
+
+        for (let i = 0; i < radio.length; i++) {
+
+            radio[i].addEventListener('change', (e) => {
+                let info = document.querySelector("#info");
+                info.innerHTML = "You chose " + e.target.value;
+            });
+
+        }
+
+        submit.addEventListener('click', (e) => {
+            let info = document.querySelector("#info");
+
+            for (let i = 0; i < radio.length; i++) {
+                if(radio[i].checked){
+                    info.innerHTML = "Your final choice is " + radio[i].value;
+                    document.querySelector("legend").style.color = radio[i].value;
+                }
+            }
+            
+        });
+
+
+    </script>
+</body>
+
+</html>

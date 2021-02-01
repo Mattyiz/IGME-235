@@ -1,0 +1,127 @@
+@font-face {
+    font-family: 'Retro Computer';
+    src: url('https://people.rit.edu/mmi4105/235/design_to_spec/DesignToSpecAssets/DesignToSpecAssets/Fonts/RetroComputer/transfonter.org-20201006-004529/RetroComputer.woff2') format('woff2'),
+        url('https://people.rit.edu/mmi4105/235/design_to_spec/DesignToSpecAssets/DesignToSpecAssets/Fonts/RetroComputer/transfonter.org-20201006-004529/RetroComputer.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Dogica';
+    src: url('https://people.rit.edu/mmi4105/235/design_to_spec/DesignToSpecAssets/DesignToSpecAssets/Fonts/Dogica/TTF/transfonter.org-20201006-010205/Dogica_bold.woff2') format('woff2'),
+        url('https://people.rit.edu/mmi4105/235/design_to_spec/DesignToSpecAssets/DesignToSpecAssets/Fonts/Dogica/TTF/transfonter.org-20201006-010205/Dogica_bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Dogica Pixel';
+    src: url('https://people.rit.edu/mmi4105/235/design_to_spec/DesignToSpecAssets/DesignToSpecAssets/Fonts/Dogica/TTF/transfonter.org-20201006-010205/Dogica_Pixel_Bold.woff2') format('woff2'),
+        url('https://people.rit.edu/mmi4105/235/design_to_spec/DesignToSpecAssets/DesignToSpecAssets/Fonts/Dogica/TTF/transfonter.org-20201006-010205/Dogica_Pixel_Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Dogica';
+    src: url('https://people.rit.edu/mmi4105/235/design_to_spec/DesignToSpecAssets/DesignToSpecAssets/Fonts/Dogica/TTF/transfonter.org-20201006-010205/Dogica.woff2') format('woff2'),
+        url('https://people.rit.edu/mmi4105/235/design_to_spec/DesignToSpecAssets/DesignToSpecAssets/Fonts/Dogica/TTF/transfonter.org-20201006-010205/Dogica.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Dogica Pixel';
+    src: url('https://people.rit.edu/mmi4105/235/design_to_spec/DesignToSpecAssets/DesignToSpecAssets/Fonts/Dogica/TTF/transfonter.org-20201006-010205/Dogica_Pixel.woff2') format('woff2'),
+        url('https://people.rit.edu/mmi4105/235/design_to_spec/DesignToSpecAssets/DesignToSpecAssets/Fonts/Dogica/TTF/transfonter.org-20201006-010205/Dogica_Pixel.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+html{
+    color:#FFFFFF;
+    font-family: 'Retro Computer';
+}
+
+p{
+    font-family: 'Dogica';
+}
+
+header{
+    height: 10vh;
+    background-color: #686868;
+    display: flex;
+}
+
+
+header > p{
+    text-align: right;
+    margin-left: auto;
+}
+
+main{
+    background-color: #35363D;
+}
+
+main > img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#Tree{
+    display: flex;
+    padding-top:2em;
+    padding-bottom:2em;
+    padding-left: 10%;
+    padding-right: 10%;
+    justify-content:space-around
+}
+
+#Tree > .text{
+    background-color: #686868;
+    width: 40%;
+    padding-left: 1em;
+}
+
+#Tree > img{
+    background-image: linear-gradient(to bottom right, #E8FDF5, #244D3E);
+    border: 5px solid #FFFFFF;
+}
+
+#Wood_Items{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#Wood_Items > p{
+    background-color: #686868;
+    width: 20%;
+}
+
+.Wood_Goods{
+    border: 5px solid #FFFFFF;
+    background-color: #324E44;
+    width: 20%;
+    text-align: center;
+}
+
+footer{
+    background-image: url("DesignToSpecAssets/DesignToSpecAssets/Assets/trees.jpg");
+    height: 20vh;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;;
+}
+
+footer > h2{
+    width: 30%;
+}

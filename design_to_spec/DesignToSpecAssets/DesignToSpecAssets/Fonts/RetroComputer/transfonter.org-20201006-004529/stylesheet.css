@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Retro Computer';
+    src: url('https://people.rit.edu/mmi4105/235/design_to_spec/DesignToSpecAssets/DesignToSpecAssets/Fonts/RetroComputer/transfonter.org-20201006-004529/RetroComputer.woff2') format('woff2'),
+        url('https://people.rit.edu/mmi4105/235/design_to_spec/DesignToSpecAssets/DesignToSpecAssets/Fonts/RetroComputer/transfonter.org-20201006-004529/RetroComputer.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

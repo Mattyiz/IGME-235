@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<title>Image Gallery</title>
+	<style>
+		body {
+			font-family: "Helvetica", "Arial", serif;
+			color: #333;
+			background-color: #fff;
+			margin: 1em 10%;
+		}
+
+		#main {
+			padding-top: 30px;
+			width: 400px;
+			margin: 0 auto;
+		}
+
+		span[data-image] {
+			transition-property: opacity;
+			transition-duration: 0.5s;
+			color: #c60;
+			background-color: transparent;
+			font-weight: bold;
+			text-decoration: none;
+			cursor: pointer;
+		}
+
+		span[data-image]:hover {
+			opacity: 0.5;
+		}
+
+		h1 {
+			color: #333;
+			background-color: transparent;
+		}
+
+		ul {
+			padding: 0;
+		}
+
+		li {
+			float: left;
+			padding: 1em;
+			list-style: none;
+		}
+
+		img {
+			display: block;
+			clear: both;
+			box-shadow: 7px 7px 5px #888;
+			border: 1px solid #aaa;
+			transition-property: opacity;
+			transition-duration: 0.5s;
+		}
+
+		footer {
+			font-size: 70%;
+			color: #bbb;
+			text-align: center;
+		}
+	</style>
+
+	</script>
+</head>
+
+<body>
+	<section id="main">
+		<h1>Snapshots</h1>
+		<ul>
+			<li><span data-image="cassie.jpg" title="A doggie">Cassie</span></li>
+			<li><span data-image="seal.jpg" title="A seal">Seal</span></li>
+			<li><span data-image="wolf.jpg" title="A wolf">Wolf</span></li>
+			<li><span data-image="eagle.jpg" title="An eagle">Eagle</span></li>
+		</ul>
+		<div id="imagewrapper">
+			<img id="placeholder" src="images/placeholder.gif" alt="my image gallery" />
+		</div>
+		<p id="description">Choose an image.</p>
+		<footer>
+			<p>For IGME-235 Intro to Game Web Tech</p>
+		</footer>
+	</section>
+	<script>
+		/*
+		The name of the image is stored in the data-image (custom data) attribute of each
+		span. In JavaScript we access these custom data properties using the .dataset 
+		property. We also covered this in web-apps-6.
+		*/
+
+		/*
+
+		I wanted to make sure I had a base method down before I began to optimize it. I left this in so you could
+		see my thought process.
+
+		"use strict";
+		let cassie = document.querySelector('[title="A doggie"]');
+		let seal = document.querySelector('[title="A seal"]');
+		let wolf = document.querySelector('[title="A wolf"]');
+		let eagle = document.querySelector('[title="An eagle"]');
+		let image = document.querySelector("#imagewrapper");
+
+
+		cassie.addEventListener('click', (e) => {
+			image.innerHTML = "<img id=\"cassie\" src=\"images/cassie.jpg\" alt=\"A doggie\" />"
+		});
+
+		seal.addEventListener('click', (e) => {
+			image.innerHTML = "<img id=\"seal\" src=\"images/seal.jpg\" alt=\"A seal\" />"
+		});
+
+		wolf.addEventListener('click', (e) => {
+			image.innerHTML = "<img id=\"wolf\" src=\"images/wolf.jpg\" alt=\"A wolf\" />"
+		});
+
+		eagle.addEventListener('click', (e) => {
+			image.innerHTML = "<img id=\"eagle\" src=\"images/eagle.jpg\" alt=\"An eagle\" />"
+		});
+		*/
+
+		"use strict";
+
+		//Declare each span as a variable, probably a more efficient way
+		let cassie = document.querySelector('[title="A doggie"]');
+		let seal = document.querySelector('[title="A seal"]');
+		let wolf = document.querySelector('[title="A wolf"]');
+		let eagle = document.querySelector('[title="An eagle"]');
+		let image = document.querySelector("#placeholder");
+
+		//Update the alt and src of the img tag. I didn't think I had to change the id of it but that would be an easy fix.
+		let changeImage = (e) => {
+			image.alt = e.target.title;
+			image.src = "images/" + e.target.dataset.image
+		};
+
+		//Give each of the spans the same event listener. Again I think there might be a more efficient way but I can't find it.
+		cassie.addEventListener('click', changeImage);
+		seal.addEventListener('click', changeImage);
+		wolf.addEventListener('click', changeImage);
+		eagle.addEventListener('click', changeImage);
+
+
+	</script>
+
+</body>
+
+</html>

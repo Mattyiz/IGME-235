@@ -1,0 +1,36 @@
+@font-face {
+    font-family: 'Dogica';
+    src: url('Dogica_bold.woff2') format('woff2'),
+        url('Dogica_bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Dogica Pixel';
+    src: url('Dogica_Pixel_Bold.woff2') format('woff2'),
+        url('Dogica_Pixel_Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Dogica';
+    src: url('Dogica.woff2') format('woff2'),
+        url('Dogica.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Dogica Pixel';
+    src: url('Dogica_Pixel.woff2') format('woff2'),
+        url('Dogica_Pixel.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
